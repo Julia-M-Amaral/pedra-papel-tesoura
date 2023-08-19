@@ -14,11 +14,14 @@ function jogadaComputador(){
 };
 
 let placar = {
-  
-}
+  vitoria: 0,
+  derrota: 0,
+  empate: 0
+};
 
 function jogo(jogadaJogador){
   const jogadaPC = jogadaComputador();
+  
   let resultado = {
     ganhou: 'Você ganhou.',
     perdeu: 'Você perdeu.',
@@ -28,35 +31,52 @@ function jogo(jogadaJogador){
   if (jogadaJogador === 'pedra'){
     if (jogadaPC === 'papel'){
       resultado = resultado.perdeu;
+      placar.derrota++;
     } else if (jogadaPC === 'tesoura'){
       resultado = resultado.ganhou;
+      placar.vitoria++;
     } else{
       resultado = resultado.empate;
-    };
+      placar.empate++;
+    }
 };
 
   if (jogadaJogador === 'papel'){
     if(jogadaPC === 'pedra'){
       resultado = resultado.ganhou;
+      placar.vitoria++;
     } else if (jogadaPC === 'tesoura'){
       resultado = resultado.perdeu;
+      placar.derrota++;
     } else{
       resultado = resultado.empate;
-    };
+      placar.empate++;
+    }
   };
 
   if (jogadaJogador === 'tesoura'){
-    if (jogadaComputador === 'papel'){
+    if (jogadaPC === 'papel'){
       resultado = resultado.ganhou;
-    } else if (jogadaComputador === 'pedra'){
+      placar.vitoria++;
+    } else if (jogadaPC === 'pedra'){
       resultado = resultado.perdeu;
+      placar.derrota++;
     } else{
       resultado = resultado.empate;
+      placar.empate++
     }
-    
-  }
-console.log(`Voce escolheu: ${jogadaJogador} - Computador escolheu: ${jogadaPC}. Resultado: ${resultado}`);
+  };
 
-}
+  document.querySelector('.p-resultado')
+    .innerHTML = resultado;
+
+  document.querySelector('.p-jogadas')
+    .innerHTML = `Você: ${jogadaJogador} - ${jogadaPC} Computador`;
+
+  document.querySelector('.p-placar')
+    .innerHTML = `Vitória: ${placar.vitoria} Derrota: ${placar.derrota} Empate: ${placar.empate}`;
+
+
+};
 
 
