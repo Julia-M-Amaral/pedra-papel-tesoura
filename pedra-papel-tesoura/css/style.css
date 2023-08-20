@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+.main{
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .btn-jogada{
   border: none;
   background: transparent;
@@ -22,4 +28,11 @@
 
 p{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.p-resultado{
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
