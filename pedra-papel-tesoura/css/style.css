@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.btn-jogada{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-jogada img{
+  width: 80px;
+}
+
+.btn-jogadaa{
+  width: 80px;
+}
+
+.btn-resetar-placar{
+  font-family: 'Press Start 2P', cursive;
+  height: 40px;
+  width: 230px;
+}
+
+p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

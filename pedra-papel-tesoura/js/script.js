@@ -1,5 +1,3 @@
-
-
 function jogadaComputador(){
 
   let numAleatorio = Math.random();
@@ -38,7 +36,7 @@ function jogo(jogadaJogador){
     } else{
       resultado = resultado.empate;
       placar.empate++;
-    }
+    };
 };
 
   if (jogadaJogador === 'papel'){
@@ -51,7 +49,7 @@ function jogo(jogadaJogador){
     } else{
       resultado = resultado.empate;
       placar.empate++;
-    }
+    };
   };
 
   if (jogadaJogador === 'tesoura'){
@@ -63,20 +61,33 @@ function jogo(jogadaJogador){
       placar.derrota++;
     } else{
       resultado = resultado.empate;
-      placar.empate++
-    }
+      placar.empate++;
+    };
   };
 
   document.querySelector('.p-resultado')
-    .innerHTML = resultado;
+    .innerHTML = resultado;                                  
 
   document.querySelector('.p-jogadas')
-    .innerHTML = `Você: ${jogadaJogador} - ${jogadaPC} Computador`;
+    .innerHTML = `Você: <img src="img/${jogadaJogador}.png" class="btn-jogadaa">  <img src="img/${jogadaPC}.png" class="btn-jogadaa"> Computador`;
 
-  document.querySelector('.p-placar')
-    .innerHTML = `Vitória: ${placar.vitoria} Derrota: ${placar.derrota} Empate: ${placar.empate}`;
-
+    placarAtualizado();
 
 };
+
+function resetarPlacar(){
+  placar.vitoria = 0;
+  placar.derrota =  0;
+  placar.empate = 0;
+  placarAtualizado();
+}
+
+function placarAtualizado(){
+
+  document.querySelector('.p-placar')
+  .innerHTML = `Vitória: ${placar.vitoria} Derrota: ${placar.derrota} Empate: ${placar.empate}`;
+
+};
+
 
 

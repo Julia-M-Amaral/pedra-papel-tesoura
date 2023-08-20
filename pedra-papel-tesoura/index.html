@@ -8,12 +8,14 @@
 </head>
 <body>
   <h1>Pedra Papel Tesoura</h1> 
-  <button class="btn-jogada btn-rock" onclick="jogo('pedra')">Pedra</button>
-  <button class="btn-jogada btn-paper" onclick="jogo('papel')">Papel</button>
-  <button class="btn-jogada btn-scissors" onclick="jogo('tesoura')">Tesoura</button>
+  <button class="btn-jogada btn-rock" onclick="jogo('pedra')"><img src="img/pedra.png"></button>
+  <button class="btn-jogada btn-paper" onclick="jogo('papel')"><img src="img/papel.png"></button>
+  <button class="btn-jogada btn-scissors" onclick="jogo('tesoura')"><img src="img/tesoura.png"></button>
 
   <p class="p-resultado"></p>
   <p class="p-jogadas"></p>
   <p class="p-placar"></p>
+
+  <button class="btn-resetar-placar" onclick="resetarPlacar()">Resetar o placar</button>
 </body>
 </html>
