@@ -80,7 +80,7 @@ function resetarPlacar(){
   placar.derrota =  0;
   placar.empate = 0;
   placarAtualizado();
-}
+};
 
 function placarAtualizado(){
 
